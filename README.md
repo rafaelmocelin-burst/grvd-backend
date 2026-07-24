@@ -16,7 +16,7 @@ client from drifting apart.
 | Project | Ref | Role |
 |---|---|---|
 | `grvd-daw` | `kpchlhxfsvonspyiikqs` | Production (web testers write here) |
-| *staging (planned)* | — | UE development target, same schema |
+| `grvd-staging` | `erqiyxakfdoemeskpygy` | UE development target — migrations 001–003 applied 2026-07-24 (003 is a provisional get_live_energy pending the prod dump) |
 
 > Note: the UE game currently points at a separate, older Supabase project
 > (`ihdrcftcmtyvaaabehbe`, not in the Burst org) with its own ad-hoc schema
