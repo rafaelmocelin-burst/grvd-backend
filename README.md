@@ -26,11 +26,12 @@ client from drifting apart.
 ## Layout
 
 ```
-migrations/   Ordered SQL migrations. 001 is the original web-app schema.
-              ⚠ The live DB has grown far beyond 001 (tastemaker economy,
-              friends, coop invites, sounds catalog, game_config, ~30 RPCs)
-              via dashboard SQL that was never captured as migrations.
-              A dump of the live schema is the next step — see scripts/.
+migrations/   Ordered SQL migrations. 001–002 are the original web-app schema;
+              004–008 are the FULL production baseline captured 2026-07-24
+              (20 tables, 5 views, 34 function bodies, 36 policies, triggers,
+              buckets, seed data) and applied to grvd-staging. Verified:
+              staging's function fingerprint is byte-identical to production
+              (md5 38849179d2f98780aae2d486ff78391f). 003 is superseded.
 contract/     The wire contract as consumed by clients:
               - supabase.types.ts — generated types from the LIVE database
                 (supabase gen types). Complete: 18 tables, 5 views, ~30 RPC

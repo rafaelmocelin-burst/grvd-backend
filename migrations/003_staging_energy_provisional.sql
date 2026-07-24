@@ -1,3 +1,4 @@
+﻿-- SUPERSEDED 2026-07-24 by 004-007 (real prod baseline). Kept for staging migration history.
 -- PROVISIONAL — staging-only bootstrap so UE P1 can log real server data.
 -- Production's get_live_energy body will replace this once the prod restore
 -- finishes and the schema is dumped here as the real baseline. Semantics
@@ -43,3 +44,4 @@ begin
     v_stats.energy_updated_at;
 end;
 $$;
+
